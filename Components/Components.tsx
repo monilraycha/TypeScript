@@ -3,7 +3,7 @@ import React from 'react';
 import CommonTextInput from './CommonTextInput';
 
 export default function Components() {
-  const [name, setName] = React.useState<string>('');
+  const [name, setName] = React.useState<string>('');       
   const [number, setNumber] = React.useState<string>('');
   const [badName , setBadName] = React.useState<boolean>(false);
   const [badNumber , setBadNumber] = React.useState<boolean>(false);
@@ -62,7 +62,7 @@ export default function Components() {
         maxLength={10}
         value={number}
         onChangeText={(text: string) => setNumber(text)} // Updated typing
-        keyboardType="number-pad"
+        keyboardType="phone-pad"
         disabled={false}
         validate={badNumber}
       />

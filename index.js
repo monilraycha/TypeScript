@@ -9,5 +9,6 @@ import Products from './screens/Products';
 import ReduxList from './screens/ReduxList';
 import MainRedux from './MainRedux';
 import Components from './Components/Components';
+import Example from './Example';
 
 AppRegistry.registerComponent(appName, () => Components);

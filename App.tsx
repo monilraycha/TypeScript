@@ -39,7 +39,6 @@ const App = () => {
 
             <Stack.Screen name='Home' component={Home} />
             <Stack.Screen name='Settings' component={Settings} />
-
            
         </Stack.Navigator>
     </NavigationContainer>
