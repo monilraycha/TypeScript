@@ -3,41 +3,34 @@ import React from 'react';
 import CommonTextInput from './CommonTextInput';
 
 export default function Components() {
-  const [name, setName] = React.useState<string>('');       
+  const [name, setName] = React.useState<string>('');
   const [number, setNumber] = React.useState<string>('');
-  const [badName , setBadName] = React.useState<boolean>(false);
-  const [badNumber , setBadNumber] = React.useState<boolean>(false);
+  const [badName, setBadName] = React.useState<boolean>(false);
+  const [badNumber, setBadNumber] = React.useState<boolean>(false);
 
   const validate = () => {
-      let valid = true ;
+    let valid = true;
 
-      if(name === ''){
-        valid = false ;
-        setBadName(true);
+    if (name === '') {
+      valid = false;
+      setBadName(true);
+    } else if (name !== '') {
+      setBadName(false);
+    }
+    if (name === '') {
+      valid = false;
+      setBadName(true);
+    } else if (name !== '') {
+      setBadName(false);
+    }
 
-      }
-      else if (name!==''){
-          setBadName(false);
-      }
-      if(name === ''){
-        valid = false ;
-        setBadName(true);
-
-      }
-      else if (name!==''){
-          setBadName(false);
-      }
-
-      if(number === ''){
-        valid = false ;
-        setBadNumber(true);
-
-      }
-      else if (number!==''){
-          setBadNumber(false);
-      }
-
-  }
+    if (number === '') {
+      valid = false;
+      setBadNumber(true);
+    } else if (number !== '') {
+      setBadNumber(false);
+    }
+  };
 
   return (
     <View style={styles.container}>
@@ -52,9 +45,7 @@ export default function Components() {
       />
 
       {badName ? (
-        <Text style={{color: 'red'}}>
-          Please enter your name
-        </Text>
+        <Text style={{color: 'red'}}>Please enter your name</Text>
       ) : null}
 
       <CommonTextInput
@@ -68,9 +59,7 @@ export default function Components() {
       />
 
       {badNumber ? (
-        <Text style={{color: 'red'}}>
-          Please enter your number
-        </Text>
+        <Text style={{color: 'red'}}>Please enter your number</Text>
       ) : null}
 
       <TouchableOpacity
@@ -83,9 +72,7 @@ export default function Components() {
           alignItems: 'center',
           marginTop: 20,
         }}
-        
-        onPress={() => validate()}
-        >
+        onPress={() => validate()}>
         <Text style={{color: 'white'}}>Submit</Text>
       </TouchableOpacity>
     </View>
@@ -99,4 +86,3 @@ const styles = StyleSheet.create({
     alignItems: 'center',
   },
 });
-

@@ -10,5 +10,7 @@ import ReduxList from './screens/ReduxList';
 import MainRedux from './MainRedux';
 import Components from './Components/Components';
 import Example from './Example';
+import Validations from './Validations';
+import Loops from './Loops';
 
-AppRegistry.registerComponent(appName, () => Components);
+AppRegistry.registerComponent(appName, () => Loops);
