@@ -1,37 +1,93 @@
-import React, { useEffect } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
 
-const Loops: React.FC = () => {
-  const fruits: string[] = ['Apple', 'Banana', 'Cherry'];
 
-  useEffect(() => {
-    fruits.forEach((fruit) => {
-      console.log(fruit);
-    });
-  }, []);
+
+// const Loops : React.FC = () => {
+
+//     const items : string[] = ['Apple' , 'Banana' , 'Cherry' , 'Date' , 'Elderberry']
+
+
+//   return (
+//     <View style={styles.container}>
+//         {items.map((item , index) => (
+//             <Text key={index}>{item}</Text>
+//         ))}
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+//     container : {
+//         flex : 1,
+//         justifyContent : 'center',
+//         alignItems : 'center'
+//     }
+// })
+
+// export default Loops;
+
+// for loop example
+
+// import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
+
+// const Loops : React.FC = () => {
+
+//     const numbers : number[] = [];
+
+//     for(let i = 0 ; i < 10 ; i++){
+//         numbers.push(i);
+//     }
+
+//   return (
+//     <View style={styles.container}>
+  
+//   {numbers.map((number , index) => (
+//       <Text key={index}>Number : {number}</Text>
+//   ))}
+//     </View>
+//   )
+// }
+
+// const styles = StyleSheet.create({
+//     container : {
+//         flex : 1,
+//         justifyContent : 'center',
+//         alignItems : 'center'
+//     }, 
+//     text : {
+//         fontSize : 20
+//     }
+// })
+
+// export default Loops;
+
+// forEach loop example
+
+import { StyleSheet, Text, View } from 'react-native'
+import React, { useEffect } from 'react'
+
+
+
+const Loops : React.FC = ( ) => {
+
+    const fruits : string[] = ['Apple' , 'Banana' , 'Cherry' , 'Date' , 'Elderberry'];
+
+        const [fruit , setFruit] = React.useState<string>('');
+
+    useEffect(() => {
+        fruits.forEach((fruit , index) => {
+            setFruit(fruit);
+        })
+    }, []);
+
 
   return (
-    <View style={styles.container}>
-      {fruits.map((fruit, index) => (
-        <Text key={index} style={styles.item}>
-          {fruit}
-        </Text>
-      ))}
+    <View>
+      <Text>Loops</Text>
     </View>
-  );
-};
+  )
+}
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    justifyContent: 'center',
-    alignItems: 'center',
-    padding: 16,
-  },
-  item: {
-    fontSize: 18,
-    marginVertical: 4,
-  },
-});
-
-export default Loops;
+const styles = StyleSheet.create({})
