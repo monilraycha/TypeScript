@@ -12,5 +12,6 @@ import Components from './Components/Components';
 import Example from './Example';
 import Validations from './Validations';
 import Loops from './Loops';
+import GetLocation from './GetLocation';
 
-AppRegistry.registerComponent(appName, () => Loops);
+AppRegistry.registerComponent(appName, () => GetLocation);
