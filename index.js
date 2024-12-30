@@ -13,5 +13,8 @@ import Example from './Example';
 import Validations from './Validations';
 import Loops from './Loops';
 import GetLocation from './GetLocation';
+import modal from './modal';
+import APIs from './APIs';
+import Axios from './Axios';
 
-AppRegistry.registerComponent(appName, () => GetLocation);
+AppRegistry.registerComponent(appName, () => Axios);
