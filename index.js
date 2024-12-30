@@ -16,5 +16,6 @@ import GetLocation from './GetLocation';
 import modal from './modal';
 import APIs from './APIs';
 import Axios from './Axios';
+import SkeletonBasic from './SkeletonBasic';
 
-AppRegistry.registerComponent(appName, () => Axios);
+AppRegistry.registerComponent(appName, () => SkeletonBasic);
